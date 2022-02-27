@@ -1,0 +1,59 @@
+.together {
+  position: relative;
+  background-color: $v-p-blue;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -28%;
+    left: 0;
+    width: 100%;
+    height: 28%;
+    background-image: url(../images/bg-section-top-mobile-1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @include breakpoint-up(small) {
+      background-image: url(../images/bg-section-top-desktop-1.svg);
+    }
+    @include breakpoint-up(large) {
+      height: 35%;
+      top: -35%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-image: url(../images/bg-section-bottom-mobile-1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include breakpoint-up(small) {
+      background-image: url(../images/bg-section-bottom-desktop-1.svg);
+    }
+    @include breakpoint-up(large) {
+      height: 35%;
+      bottom: -35%;
+    }
+  }
+  & .container {
+    flex-direction: column;
+    padding-bottom: 70px;
+    padding-top: 110px;
+    @include breakpoint-up(small) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 80px;
+    }
+    & .text {
+      text-align: center;
+      @include breakpoint-up(small) {
+        order: -1;
+        flex-basis: 50%;
+        text-align: unset;
+      }
+    }
+  }
+}

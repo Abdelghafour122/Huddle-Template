@@ -1,0 +1,27 @@
+.flowing {
+  margin: 250px 0;
+  @include breakpoint-up(small) {
+    margin: 270px 0;
+  }
+  @include breakpoint-up(large) {
+    margin: 400px 0;
+  }
+  & .container {
+    flex-direction: column;
+    @include breakpoint-up(small) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 80px;
+    }
+    @include breakpoint-up(large) {
+      gap: 150px;
+    }
+    & .text {
+      text-align: center;
+      @include breakpoint-up(small) {
+        flex-basis: 50%;
+        text-align: unset;
+      }
+    }
+  }
+}

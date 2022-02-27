@@ -1,0 +1,12 @@
+.get-started {
+  margin: 260px 0 400px 0;
+  @include breakpoint-up(small) {
+    margin: 300px 0;
+  }
+  @include breakpoint-up(large) {
+    margin: 400px 0 450px 0;
+  }
+  & .container {
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+footer {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: hsl(193, 59%, 19%);
+  font-size: 20px;
+  color: $v-p-blue;
+  & p {
+    margin: 0;
+    font-weight: 600;
+  }
+  & a {
+    color: $pink;
+    font-family: "poppins";
+    font-weight: bold;
+    text-decoration: dotted underline;
+  }
+}

@@ -1,0 +1,22 @@
+.hero {
+  margin-top: 140px;
+  margin-bottom: 150px;
+  text-align: center;
+  & h1 {
+    margin: 0;
+    font-size: 32px;
+    @include breakpoint-up(small) {
+      font-size: 40px;
+    }
+  }
+  & p {
+    color: $v-d-cyan;
+    line-height: 1.6;
+    font-size: 17px;
+    margin: 30px auto 70px auto;
+    @include breakpoint-up(small) {
+      margin-bottom: 55px;
+      max-width: 47%;
+    }
+  }
+}

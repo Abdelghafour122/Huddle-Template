@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open sans";
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img.sub-img {
+  max-width: 85%;
+  @include breakpoint-up(small) {
+    max-width: 46%;
+  }
+}
+
+h1 {
+  font-family: "Poppins";
+  color: $v-d-cyan;
+  &.small-h {
+    font-size: 31px;
+    margin: 95px 0 23px 0;
+    @include breakpoint-up(small) {
+      margin-top: 0;
+    }
+  }
+}
+
+p.sub-p {
+  color: $v-d-cyan;
+  line-height: 1.6;
+  margin: 0;
+}
+
+button.main-b {
+  padding: 20px 47px;
+  border-radius: 110px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: inherit;
+  color: $white;
+  background-color: $pink;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $light-pink;
+  }
+  box-shadow: 0px 4px 10px 0px lightgray;
+  @include breakpoint-up(small) {
+    padding: 20px 85px;
+  }
+}
+
+.df {
+  display: flex;
+  &.jc-sb {
+    justify-content: space-between;
+  }
+  &.jc-c {
+    justify-content: center;
+  }
+  &.jc-sa {
+    justify-content: space-around;
+  }
+  &.jc-fs {
+    justify-content: flex-start;
+  }
+  &.jc-fe {
+    justify-content: flex-end;
+  }
+  &.ai-c {
+    align-items: center;
+  }
+  &.fd-c {
+    flex-direction: column;
+  }
+}
+
+.container {
+  // 750px
+  @include breakpoint-down(small) {
+    max-width: 46.875rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @include breakpoint-up(small) {
+    max-width: 46.875rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  // 970px
+  @include breakpoint-up(medium) {
+    max-width: 59.375rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  // 1120px
+  @include breakpoint-up(large) {
+    max-width: 73.125rem;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+
+.hide-in-desktop {
+  @include breakpoint-up(small) {
+    display: none;
+  }
+}
+
+.hide-in-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.fades {
+  opacity: 0;
+  transition: 0.7s;
+  &.show {
+    opacity: 1;
+  }
+}
+
+div.failure {
+  border: 2px solid red;
+  &::after {
+    content: "Check your email please";
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    color: red;
+    opacity: 1;
+    transition: 0.3s;
+  }
+}

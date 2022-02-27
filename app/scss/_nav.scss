@@ -1,0 +1,38 @@
+nav {
+  padding: 42px 0;
+  @include breakpoint-up(small) {
+    padding: 80px 0;
+  }
+  & .logo {
+    height: fit-content;
+    width: fit-content;
+    & img {
+      width: 153px;
+      height: 25px;
+      @include breakpoint-up(small) {
+        width: 222px;
+        height: 33px;
+      }
+    }
+  }
+  & button {
+    font-family: inherit;
+    padding: 8px 26px;
+    background-color: $white;
+    border: 1px solid $pink;
+    border-radius: 100px;
+    color: $pink;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px -1px $light-pink;
+    cursor: pointer;
+    transition: 0.3s;
+    @include breakpoint-up(small) {
+      padding: 10px 32px;
+      font-size: 17px;
+    }
+    &:hover {
+      color: $light-pink;
+      border-color: $light-pink;
+    }
+  }
+}

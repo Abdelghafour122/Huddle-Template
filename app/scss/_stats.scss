@@ -1,0 +1,68 @@
+.stats {
+  margin-bottom: 200px;
+  @include breakpoint-up(small) {
+    margin-bottom: 250px;
+  }
+  @include breakpoint-up(large) {
+    margin-bottom: 300px;
+  }
+  & img {
+    width: 333px;
+    margin-bottom: 200px;
+    @include breakpoint-up(small) {
+      width: 890px;
+      @include breakpoint-down(medium) {
+        width: 750px;
+      }
+    }
+  }
+  & .numbers {
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint-up(small) {
+      justify-content: space-around;
+      flex-direction: row;
+      width: 100%;
+    }
+    & .subs {
+      text-align: center;
+      & > div {
+        font-size: 73px;
+        font-weight: 700;
+        color: $v-d-cyan;
+      }
+      & > div + div {
+        font-size: 19px;
+        font-weight: 300;
+        color: #8190a3;
+        margin-top: 15px;
+      }
+    }
+    & #comm {
+      margin-bottom: 190px;
+      position: relative;
+      &::before {
+        content: url(../images/icon-communities.svg);
+        position: absolute;
+        top: -40px;
+        left: 0;
+        height: 20px;
+        width: 25px;
+      }
+      @include breakpoint-up(small) {
+        margin-bottom: 0;
+      }
+    }
+    & #mess {
+      position: relative;
+      &::before {
+        content: url(../images/icon-messages.svg);
+        position: absolute;
+        top: -40px;
+        left: 0;
+        height: 20px;
+        width: 25px;
+      }
+    }
+  }
+}
